@@ -33,7 +33,6 @@ function preload(){
     this.load.image('ground', 'assets/platform4.png');
     this.load.spritesheet('dude', 'assets/Recor4.png', {frameWidth: 70, frameHeight: 74});
     this.load.spritesheet('dude2', 'assets/Recor5.png', {frameWidth: 70, frameHeight: 74});
-    this.load.spritesheet('dude3', 'assets/Recor6.png', {frameWidth: 70, frameHeight: 74});
 }
 function create(){
     this.add.image(400, 225, 'sky');
@@ -54,12 +53,7 @@ function create(){
         frameRate: 10,
         repeat: -1
     });
-    this.anims.create({
-        key: '',
-        frames: this.anims.generateFrameNumbers('dude3', {start: 5, end: 8}),
-        frameRate: 10,
-        repeat: -1
-    });
+    
 
     //player.body.setGravityY(300);
     this.physics.add.collider(player, platforms);  // Jugador
@@ -85,9 +79,7 @@ function update(){
         
     }
     if(player.x==-50 ){
-        g=3
-        i = 0
-        player.anims.play('right',true);
+        g=0
     }
 
 }
